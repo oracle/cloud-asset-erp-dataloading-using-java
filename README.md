@@ -16,7 +16,9 @@ https://docs.oracle.com/en/solutions/load-data-erp-java/index.html
 # **Command line usage**
 The tool can be run from command line on any platform that supports Java. The basic command, assuming that the complied binary is packed into ERPDataLoad.jar, is: 
 
+```
 java -jar "ERPDataLoad.jar"
+```
 
 Note: The command line utility prompts for a password for user specified in configuration file, to prevent the password being revealed. 
 
