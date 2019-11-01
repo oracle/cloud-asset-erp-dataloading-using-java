@@ -1,37 +1,30 @@
-**Asset Scope**
+# **Java Code sample for loading bulk data into Oracle ERP cloud**
+This repository contains code and configuration file for a command line tool that loads bulk data in a .csv file into Oracle ERP Cloud. The code can be complied and run as a command line tool, or it can be used as a baseline for other Java enterprise applications. It can be useful as a utility to load data files on an adhoc basis quickly. A good understanding of integration with Oracle ERP Cloud is required to use or modify this code.
 
-- Java code sample
-- Monitors a known directory on the compute Server, e.g. a SFTP location
-- When a new file is detected the file is read and uploaded to ERP cloud
-- Log files are updated 
-- Processed files are preserved, e.g. in a /processed directory
-------
+A configuration file allows certain aspects of the job to be customized without the need to modify code. A sample configuration file is provided.
 
-# **Link to more information about this solution.**
+# **Link to more information**
+To learn more about the integraton pattern implemented by the code, for ERP web services used and for detailed instructions to run it as a tool, see solution documentation at 
 https://docs.oracle.com/en/solutions/load-data-erp-java/index.html
 
-# **Command line tool to bulk load data into Oracle ERP cloud.**
+# **Dependencies**
 
-ERP cloud allows bulk import of data through web services. The web service call could be invoked from any platform that supports SOAP clients, including a standalone Java program. A sample stand alone Java utility is provided by A-Team for customers to use as a baseline and tailor to suit their needs.
+* JDK - Oracle Java SE 1.8 was used to build and test the utility. Verify compatibility with any other versions of Java.
+* Oracle ERP Cloud - Access to Oracle ERP Cloud is required to run the code. 
+* Nework connectivity - This code sample connects with ERP Cloud, so connectivity to internet is required.
 
-**Note: **The command line utility prompts for a password for user specified in configuration file.
-
-**Sample Command line format.**
+# **Command line usage**
+The tool can be run from command line on any platform that supports Java. The basic command, assuming that the complied binary is packed into ERPDataLoad.jar, is: 
 
 java -jar "ERPDataLoad.jar"
 
-Dependencies:
+Note: The command line utility prompts for a password for user specified in configuration file, to prevent the password being revealed. 
 
+## **Sample Configuration file**
 
-JDK - Oracle Java SE 1.8 was used to build and test the utility. Verify compatibility with any other versions of Java.
-
-Configuration file - A sample configuration file is provided with the utility. This file must be modified with environment-specific settings such as URLs and credentials and information such as data file’s location and a specific ERP job to be invoked.
-
-## **Configuration file.**
+A sample configuration for the tool is provided below. Configuration contains two groups of settings, one for client-specific settings and another for server-specific settings. This file must be modified with settings such as URLs, credentials, data file location and name of a specific ERP job to be invoked.
 
 ```
-#A sample configuration is provided below. Configuration contains two groups of settings, one for client-specific settings and another for server-specific settings.
-
 #Job paramaters.
 
 #Directory where the processed files are to be stored.
@@ -59,3 +52,15 @@ JobName=oracle/apps/ess/financials/generalLedger/programs/common,JournalImportLa
 #A URL that ERP cloud can call upon completion of the job.
 CallbackURL={http://hostname:port/uri}
 ```
+## **Get help**
+
+Visit Oracle Cloud Customer Connect Community at https://cloudcustomerconnect.oracle.com for additional resources and FAQs. 
+
+## **License**
+Copyright (c) 2015, 2019, Oracle and/or its affiliates. All rights reserved.
+
+You may not use the identified files except in compliance with the Apache License, Version 2.0 (the "License.")
+
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for the specific language governing permissions and limitations under the License.
