@@ -54,11 +54,11 @@ JobName=oracle/apps/ess/financials/generalLedger/programs/common,JournalImportLa
 #A URL that ERP cloud can call upon completion of the job.
 CallbackURL={http://hostname:port/uri}
 ```
-## **Get help**
+# **Get help**
 
 Visit Oracle Cloud Customer Connect Community at https://cloudcustomerconnect.oracle.com for additional resources and FAQs. 
 
-## **License**
+# **License**
 Copyright (c) 2015, 2019, Oracle and/or its affiliates. All rights reserved.
 
 You may not use the identified files except in compliance with the Apache License, Version 2.0 (the "License.")
