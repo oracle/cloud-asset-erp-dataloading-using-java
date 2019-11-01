@@ -61,8 +61,4 @@ Visit Oracle Cloud Customer Connect Community at https://cloudcustomerconnect.or
 # **License**
 Copyright (c) 2015, 2019, Oracle and/or its affiliates. All rights reserved.
 
-You may not use the identified files except in compliance with The Universal Permissive License (UPL), Version 1.0 (the "License.")
-
-You may obtain a copy of the License in a file named LICENSE in this repository. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-See the License for the specific language governing permissions and limitations under the License.
+The code in this repository is licensed under the Universal Permissive License 1.0. See the [LICENSE](https://github.com/oracle/cloud-asset-erp-dataloading-using-java/blob/master/LICENSE) for details.
